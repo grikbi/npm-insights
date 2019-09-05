@@ -1,0 +1,8 @@
+boto3
+daiquiri
+gevent
+numpy
+scipy
+gunicorn
+fastapi
+uvicorn
