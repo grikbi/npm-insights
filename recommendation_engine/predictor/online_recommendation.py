@@ -56,11 +56,6 @@ class PMFRecommendation(AbstractRecommender):
         self.latent_item_rep_mat = None
         self.weight_matrix = None
         self.s3_client = data_store
-        _logger.error("*****************")
-        _logger.error(self.s3_client.get_name())
-        _logger.error(PMF_MODEL_PATH)
-        # _logger.error(self.s3_client.object_exists(PMF_MODEL_PATH))
-        _logger.error("*****************")
         self._load_model_output_matrices(model_path=PMF_MODEL_PATH)
         self._load_package_id_to_name_map()
         self._package_tag_map = self.s3_client.read_json_file(PACKAGE_TAG_MAP)
