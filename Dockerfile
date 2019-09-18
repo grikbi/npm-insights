@@ -13,4 +13,6 @@ COPY ./recommendation_engine /recommendation_engine
 COPY ./entrypoint.sh /bin/entrypoint.sh
 RUN chmod 0777 /bin/entrypoint.sh
 
+EXPOSE 6005
+
 ENTRYPOINT ["/bin/bash"]
